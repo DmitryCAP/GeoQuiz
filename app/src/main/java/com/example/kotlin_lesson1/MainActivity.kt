@@ -10,18 +10,20 @@ import android.widget.Toast
 
 private const val TAG = "MainActivity"
 
+
 class MainActivity : AppCompatActivity() {
-    private lateinit var trueButton: Button
-    private lateinit var falseButton: Button
-    private lateinit var nextButton: Button
+    private lateinit var Button1: Button
+    private lateinit var Button2: Button
+    private lateinit var Button3: Button
+        private lateinit var nextButton: Button
     private lateinit var questionTextView: TextView
     private val questionBank = listOf(
-        Question(R.string.question_australia, true),
-        Question(R.string.question_oceans, true),
-        Question(R.string.question_mideast, false),
-        Question(R.string.question_africa, false),
-        Question(R.string.question_americas, true),
-        Question(R.string.question_asia, true)
+        Question(R.string.question1, 1),
+        Question(R.string.question2, 2),
+        Question(R.string.question3,1 ),
+        Question(R.string.question4,2 ),
+        Question(R.string.question5,2 ),
+
     )
     private var currentIndex = 0
 
@@ -29,20 +31,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate(Bundle?) called")
         setContentView(R.layout.activity_main)
-        trueButton =
-            findViewById(R.id.true_button)
-        falseButton =
-            findViewById(R.id.false_button)
+        Button1 =
+            findViewById(R.id.button1)
+        Button2 =
+            findViewById(R.id.button2)
+        Button3 =
+            findViewById(R.id.button3)
 
         nextButton =
             findViewById(R.id.next_button)
         questionTextView =
             findViewById(R.id.question_text_view)
-        trueButton.setOnClickListener { view: View ->
-            checkAnswer(true)
+        Button1.setOnClickListener { view: View ->
+            checkAnswer(1)
         }
-        falseButton.setOnClickListener { view: View ->
-            checkAnswer(false)
+        Button2.setOnClickListener { view: View ->
+            checkAnswer(2)
+        }
+        Button3.setOnClickListener { view: View ->
+            checkAnswer(3)
         }
             nextButton.setOnClickListener {
                 currentIndex = (currentIndex + 1) %
@@ -79,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        private fun checkAnswer(userAnswer:Boolean) {
+        private fun checkAnswer(userAnswer: Int) {
             val correctAnswer =
                 questionBank[currentIndex].answer
             val messageResId = if (userAnswer == correctAnswer) {
