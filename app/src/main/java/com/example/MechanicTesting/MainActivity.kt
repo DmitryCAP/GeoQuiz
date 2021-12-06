@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.kotlin_lesson1.R
-import org.w3c.dom.Text
 
 private var RESULT_TEST = "Mail"
 
@@ -16,7 +15,9 @@ var resultTest: Int = 0
 
 
 class MainActivity : AppCompatActivity() {
-lateinit var resultTestView: String
+    lateinit var cheaterButton: Button
+
+    lateinit var resultTestView: String
     lateinit var sendResultButton: Button
 
     private lateinit var Button1: Button
@@ -38,11 +39,20 @@ lateinit var resultTestView: String
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-var cheaterFragment = CheaterFragment()
-supportFragmentManager
-    .beginTransaction()
-    .replace(R.id.fragment_container, cheaterFragment)
-    .commit()
+        cheaterButton = findViewById(R.id.cheater_button)
+        val cheaterFragment1 = CheaterFragment1()
+
+
+        cheaterButton.setOnClickListener{
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment_container, cheaterFragment1)
+                .commit()
+
+        }
+
+
 
 
 
@@ -92,8 +102,7 @@ supportFragmentManager
 
                 currentIndex = (currentIndex + 1)
                 updateQuestion()
-            }
-            else
+            } else
                 nextButton.isClickable = false
         }
         val questionTextResId = questionBank[currentIndex].textResId
