@@ -1,4 +1,4 @@
-package com.example.kotlin_lesson1
+package com.example.MechanicTesting
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.kotlin_lesson1.R
 import org.w3c.dom.Text
 
 private var RESULT_TEST = "Mail"
@@ -36,6 +37,15 @@ lateinit var resultTestView: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+var cheaterFragment = CheaterFragment()
+supportFragmentManager
+    .beginTransaction()
+    .replace(R.id.fragment_container, cheaterFragment)
+    .commit()
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.example.kotlin_lesson1
+package com.example.MechanicTesting
 
 import androidx.annotation.StringRes
 

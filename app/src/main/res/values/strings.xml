@@ -27,7 +27,9 @@
     <string name="next_button">следующий вопрос</string>
     <string name="correct_toast">Правильно!</string>
     <string name="incorrect_toast">Неправильно!</string>
-    <string name="send_mail_button">отправить результат</string>
+    <string name="send_mail_button">Проверить результат</string>
     <string name="cheater_button">Подсказка</string>
     <string name="openMailButton">ОТРАВИТЬ РЕЗУЛЬТАТ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

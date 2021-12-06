@@ -1,4 +1,4 @@
-package com.example.kotlin_lesson1
+package com.example.MechanicTesting
 
 import android.content.Intent
 import android.net.Uri
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.kotlin_lesson1.R
 
 private var RESULT_TEST = "Mail"
 class SendMailActivity : AppCompatActivity() {

@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin_lesson1">
         <activity
-            android:name=".SendMailActivity"
+            android:name="com.example.MechanicTesting.SendMailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.MechanicTesting.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
