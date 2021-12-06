@@ -15,7 +15,7 @@ var resultTest: Int = 0
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var cheaterButton: Button
+lateinit var cheaterButton: Button
 
     lateinit var resultTestView: String
     lateinit var sendResultButton: Button
@@ -39,18 +39,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        cheaterButton = findViewById(R.id.cheater_button)
-        val cheaterFragment1 = CheaterFragment1()
 
+
+cheaterButton = findViewById(R.id.cheater_button)
+
+
+        val cheaterFragment1 = CheaterFragment1()
+        val cheaterFragment2 = CheaterFragment2()
+        val cheaterFragment3 = CheaterFragment3()
 
         cheaterButton.setOnClickListener{
 
+            val fragment =
+                when (supportFragmentManager.findFragmentById(R.id.fragment_container)){
+                    is CheaterFragment1 -> cheaterFragment2
+                    is CheaterFragment2 -> cheaterFragment3
+                    is CheaterFragment3 -> cheaterFragment1
+                    else -> cheaterFragment1
+                }
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragment_container, cheaterFragment1)
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(fragment.tag)
                 .commit()
-
         }
+
+
+
 
 
 
