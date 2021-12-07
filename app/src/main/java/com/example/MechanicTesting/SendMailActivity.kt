@@ -25,7 +25,7 @@ class SendMailActivity : AppCompatActivity() {
         openMailButton.setOnClickListener {
             val mailLink = Uri.parse("https://yandex.mail.ru/messages#sentmsg")
             val openMailIntent = Intent(Intent.ACTION_VIEW, mailLink)
-            startActivity(openMailIntent)
+                //   startActivity(openMailIntent)
 
             textMail = findViewById(R.id.text_mail)
             val resultTestView: String? = intent.extras?.getString(RESULT_TEST, "0")

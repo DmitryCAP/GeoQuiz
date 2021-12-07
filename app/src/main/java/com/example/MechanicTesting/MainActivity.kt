@@ -7,19 +7,17 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_lesson1.R
 
+private var NAME_CHOOSE = "Name"
 private var RESULT_TEST = "Mail"
-
 var resultTest: Int = 0
 
-
 class MainActivity : AppCompatActivity() {
-lateinit var cheaterButton: Button
-
-    lateinit var resultTestView: String
+    lateinit var chooseNameButton: Button
+    lateinit var cheaterButton: Button
     lateinit var sendResultButton: Button
-
     private lateinit var Button1: Button
     private lateinit var Button2: Button
     private lateinit var Button3: Button
@@ -31,27 +29,27 @@ lateinit var cheaterButton: Button
         Question(R.string.question3, 1),
         Question(R.string.question4, 2),
         Question(R.string.question5, 2),
-
-        )
+    )
     private var currentIndex = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
 
-cheaterButton = findViewById(R.id.cheater_button)
-
-
+        chooseNameButton = findViewById(R.id.choose_name_button)
+        chooseNameButton.setOnClickListener {
+            val chooseNameIntent: Intent = Intent(this, ChooseNameActivity::class.java)
+            startActivity(chooseNameIntent)
+           
+        }
+        cheaterButton = findViewById(R.id.cheater_button)
         val cheaterFragment1 = CheaterFragment1()
         val cheaterFragment2 = CheaterFragment2()
         val cheaterFragment3 = CheaterFragment3()
-
-        cheaterButton.setOnClickListener{
-
+        cheaterButton.setOnClickListener {
             val fragment =
-                when (supportFragmentManager.findFragmentById(R.id.fragment_container)){
+                when (supportFragmentManager.findFragmentById(R.id.fragment_container)) {
                     is CheaterFragment1 -> cheaterFragment2
                     is CheaterFragment2 -> cheaterFragment3
                     is CheaterFragment3 -> cheaterFragment1
@@ -63,18 +61,6 @@ cheaterButton = findViewById(R.id.cheater_button)
                 .addToBackStack(fragment.tag)
                 .commit()
         }
-
-
-
-
-
-
-
-
-
-
-
-
         sendResultButton = findViewById(R.id.send_result_button)
 
         sendResultButton.setOnClickListener {
@@ -128,11 +114,9 @@ cheaterButton = findViewById(R.id.cheater_button)
     private fun updateQuestion() {
         val questionTextResId = questionBank[currentIndex].textResId
         questionTextView.setText(questionTextResId)
-
     }
 
     private fun checkAnswer(userAnswer: Int) {
-
 
         val correctAnswer =
             questionBank[currentIndex].answer
@@ -155,10 +139,6 @@ cheaterButton = findViewById(R.id.cheater_button)
             this, messageResId,
             Toast.LENGTH_SHORT
         )
-
             .show()
-
-
     }
-
 }

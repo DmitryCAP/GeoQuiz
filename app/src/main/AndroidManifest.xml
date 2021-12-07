@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin_lesson1">
         <activity
+            android:name="com.example.MechanicTesting.ChooseNameActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.MechanicTesting.SendMailActivity"
             android:exported="false" />
         <activity

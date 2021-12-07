@@ -29,7 +29,8 @@
     <string name="incorrect_toast">Неправильно!</string>
     <string name="send_mail_button">Проверить результат</string>
     <string name="cheater_button">Подсказки</string>
-    <string name="openMailButton">ОТРАВИТЬ РЕЗУЛЬТАТ</string>
+    <string name="openMailButton">ОТПРАВИТЬ РЕЗУЛЬТАТ</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chooseNameButton">Выберите свою фамилию из списка</string>
 </resources>

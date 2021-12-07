@@ -5,11 +5,13 @@
       <map>
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.309375" />
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout-land/activity_main.xml" value="0.11" />
+        <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/activity_choose_name.xml" value="0.2469298245614035" />
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/activity_send_mail.xml" value="0.2469298245614035" />
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/fragment_cheater.xml" value="0.2469298245614035" />
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/fragment_cheater2.xml" value="0.2469298245614035" />
         <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/fragment_cheater3.xml" value="0.2469298245614035" />
+        <entry key="..\:/Users/dmitr/AndroidStudioProjects/Kotlin_lesson1/app/src/main/res/layout/name_list_item.xml" value="0.2469298245614035" />
       </map>
     </option>
   </component>
