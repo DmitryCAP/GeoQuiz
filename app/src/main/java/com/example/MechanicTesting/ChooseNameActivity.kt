@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_lesson1.R
 
+
 class ChooseNameActivity : AppCompatActivity() {
 
     lateinit var chooseNameRecyclerview: RecyclerView
@@ -14,6 +15,7 @@ class ChooseNameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_name)
+
 
         val nameList: List<NameList> = listOf(
             NameList(1, "Дроздов", "Дмитрий"),
@@ -38,5 +40,10 @@ class ChooseNameActivity : AppCompatActivity() {
                 DividerItemDecoration.VERTICAL
             )
         )
+
+        }
+
+
     }
-}
+
+

@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_lesson1.R
 
-private var NAME_CHOOSE = "Name"
+
 private var RESULT_TEST = "Mail"
 var resultTest: Int = 0
 
@@ -71,8 +71,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(sendMailIntent)
         }
-//        resultTestView =
-//        resultTestView = "количество правильных ответов: $resultTest"
+
 
         Button1 =
             findViewById(R.id.button1)
@@ -96,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         }
         nextButton.setOnClickListener {
 
-            if (currentIndex < 4) {
+            if (currentIndex < questionBank.size-1) {
                 Button1.isClickable = true
                 Button2.isClickable = true
                 Button3.isClickable = true
@@ -106,7 +105,7 @@ class MainActivity : AppCompatActivity() {
             } else
                 nextButton.isClickable = false
         }
-        val questionTextResId = questionBank[currentIndex].textResId
+      //  val questionTextResId = questionBank[currentIndex].textResId
         updateQuestion()
 
     }

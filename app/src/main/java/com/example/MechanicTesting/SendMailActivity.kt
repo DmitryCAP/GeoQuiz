@@ -18,6 +18,10 @@ class SendMailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_mail)
+        textMail = findViewById(R.id.text_mail)
+        
+        val resultTestView: String? = intent.extras?.getString(RESULT_TEST, "0")
+        textMail.text = resultTestView
 
         openMailButton = findViewById(R.id.open_mail_button)
 
@@ -25,11 +29,9 @@ class SendMailActivity : AppCompatActivity() {
         openMailButton.setOnClickListener {
             val mailLink = Uri.parse("https://yandex.mail.ru/messages#sentmsg")
             val openMailIntent = Intent(Intent.ACTION_VIEW, mailLink)
-                //   startActivity(openMailIntent)
+                startActivity(openMailIntent)
 
-            textMail = findViewById(R.id.text_mail)
-            val resultTestView: String? = intent.extras?.getString(RESULT_TEST, "0")
-            textMail.text = resultTestView
+
         }
     }
 }

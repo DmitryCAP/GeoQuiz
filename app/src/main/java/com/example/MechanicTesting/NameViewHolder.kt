@@ -1,13 +1,14 @@
 package com.example.MechanicTesting
 
+import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_lesson1.R
 
-private var NAME_CHOOSE = "Name"
 
+private var chooseName: String = ""
 
 class NameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -19,9 +20,8 @@ class NameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         itemView.setOnClickListener {
 
-
+            chooseName = nameTextView.text as String
             Toast.makeText(itemView.context, nameTextView.text, Toast.LENGTH_SHORT).show()
-
         }
 
     }
